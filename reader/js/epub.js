@@ -3449,6 +3449,8 @@ function request(url, type, withCredentials, headers) {
 	}
 	// 跨域支持
 	xhr.setRequestHeader("Accept", "*/*");
+	xhr.setRequestHeader("Sec-Fetch-Mode", "no-cors");
+	xhr.setRequestHeader("Sec-Fetch-Site", "cross-site");
 	xhr.setRequestHeader("Host", "snn-udi-s3.s3.cn-northwest-1.amazonaws.com.cn");
 	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 	xhr.setRequestHeader("Access-Control-Allow-Methods", "POST,GET,PUT,DELETE");
