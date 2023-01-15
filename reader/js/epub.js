@@ -3447,7 +3447,13 @@ function request(url, type, withCredentials, headers) {
 	for (header in headers) {
 		xhr.setRequestHeader(header, headers[header]);
 	}
-
+	// 跨域支持
+	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	xhr.setRequestHeader("Access-Control-Allow-Methods", "POST,GET,PUT,DELETE");
+	xhr.setRequestHeader("Access-Control-Max-Age", "3600");
+	xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
+	xhr.setRequestHeader("Access-Control-Allow-Credentials", "true");
+	
 	if (type == "json") {
 		xhr.setRequestHeader("Accept", "application/json");
 	}
