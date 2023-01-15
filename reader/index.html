@@ -20,7 +20,7 @@
             "use strict";
 
             var params = URLSearchParams && new URLSearchParams(document.location.search.substring(1))
-            var url = params && params.get("url") // && encodeURI(params.get("url"))
+            var url = params && params.get("url") && encodeURI(params.get("url"))
             url = url || "https://snn-udi-s3.s3.cn-northwest-1.amazonaws.com.cn/log/GoProgramDesign.epub?"
                 +"X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAUXJK62OYHQP4XEPF/20230115/cn-northwest-1/s3/aws4_request"
                 +"&X-Amz-Date=20230115T144359Z&X-Amz-Expires=14400&X-Amz-SignedHeaders=host&response-content-disposition=attachment;"
